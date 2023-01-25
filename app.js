@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const request = require("request");
@@ -15,6 +16,8 @@ app.post("/",function(req, res){
     var lastName = req.body.lName;
     var email = req.body.email;
     console.log(firstName, lastName, email);
+    console.log(process.env.API_KEY);
+    
 })
 
 
